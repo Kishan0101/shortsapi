@@ -270,7 +270,7 @@ class YouTubeShortGenerator:
             raise HTTPException(status_code=400, detail="Invalid YouTube URL")
         self.video_id = match.group(1)
         if not self.get_video_info():
-            raise HTTPException(status_code=400, detail="Failed to get video info")
+            raise HTTPException(status_code=400, detail="Failed to get video info. Please verify your YouTube login credentials or cookies.")
         self.get_transcript()
         video_path = self.download_video()
         if not video_path:
