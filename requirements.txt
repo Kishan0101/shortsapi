@@ -1,0 +1,10 @@
+     fastapi==0.115.0
+     uvicorn==0.30.6
+     yt-dlp==2024.8.6
+     numpy==1.26.4
+     opencv-python==4.10.0.84
+     moviepy==1.0.3
+     youtube-transcript-api==0.6.2
+     pydantic==2.9.2
+     fastapi-cors==0.111.0
+     

@@ -1,0 +1,21 @@
+2025-07-27 08:20:09,242 - ERROR - Invalid YouTube URL: 
+2025-07-27 08:20:36,952 - INFO - Found transcript in hi
+2025-07-27 08:20:50,263 - INFO - Video downloaded: generated_shorts\temp_rhZgJ9UWgoQ.mp4
+2025-07-27 08:20:54,277 - INFO - Found 3 engaging segments
+2025-07-27 08:20:56,064 - WARNING - C:\Users\Kishan\AppData\Local\Programs\Python\Python313\Lib\site-packages\moviepy\video\io\ffmpeg_reader.py:123: UserWarning: Warning: in file generated_shorts\temp_rhZgJ9UWgoQ.mp4, 691200 bytes wanted but 0 bytes read,at frame 8485/6101, at time 339.40/244.02 sec. Using the last valid frame instead.
+  warnings.warn("Warning: in file %s, "%(self.filename)+
+
+2025-07-27 08:20:56,064 - ERROR - Error determining text position: MoviePy error: failed to read the first frame of video file generated_shorts\temp_rhZgJ9UWgoQ.mp4. That might mean that the file is corrupted. That may also mean that you are using a deprecated version of FFMPEG. On Ubuntu/Debian for instance the version in the repos is deprecated. Please update to a recent version from the website.
+2025-07-27 08:20:56,952 - WARNING - C:\Users\Kishan\AppData\Local\Programs\Python\Python313\Lib\site-packages\moviepy\video\io\ffmpeg_reader.py:123: UserWarning: Warning: in file generated_shorts\temp_rhZgJ9UWgoQ.mp4, 691200 bytes wanted but 0 bytes read,at frame 6344/6101, at time 253.76/244.02 sec. Using the last valid frame instead.
+  warnings.warn("Warning: in file %s, "%(self.filename)+
+
+2025-07-27 08:20:56,952 - ERROR - Error determining text position: MoviePy error: failed to read the first frame of video file generated_shorts\temp_rhZgJ9UWgoQ.mp4. That might mean that the file is corrupted. That may also mean that you are using a deprecated version of FFMPEG. On Ubuntu/Debian for instance the version in the repos is deprecated. Please update to a recent version from the website.
+2025-07-27 08:21:34,618 - ERROR - Error adding transcript overlay: TextClip.__init__() got an unexpected keyword argument 'opacity'
+2025-07-27 08:21:36,585 - ERROR - Error adding transcript overlay: TextClip.__init__() got an unexpected keyword argument 'opacity'
+2025-07-27 08:21:37,383 - ERROR - Error adding transcript overlay: TextClip.__init__() got an unexpected keyword argument 'opacity'
+2025-07-27 08:22:25,215 - INFO - Generated thumbnail: generated_shorts\short_rhZgJ9UWgoQ_3_thumbnail.jpg
+2025-07-27 08:23:14,159 - ERROR - Error generating thumbnail: MoviePy error: failed to read the first frame of video file generated_shorts\temp_rhZgJ9UWgoQ.mp4. That might mean that the file is corrupted. That may also mean that you are using a deprecated version of FFMPEG. On Ubuntu/Debian for instance the version in the repos is deprecated. Please update to a recent version from the website.
+2025-07-27 08:24:15,799 - WARNING - C:\Users\Kishan\AppData\Local\Programs\Python\Python313\Lib\site-packages\moviepy\video\io\ffmpeg_reader.py:123: UserWarning: Warning: in file generated_shorts\temp_rhZgJ9UWgoQ.mp4, 691200 bytes wanted but 0 bytes read,at frame 9208/6101, at time 368.32/244.02 sec. Using the last valid frame instead.
+  warnings.warn("Warning: in file %s, "%(self.filename)+
+
+2025-07-27 08:24:15,799 - ERROR - Error generating thumbnail: MoviePy error: failed to read the first frame of video file generated_shorts\temp_rhZgJ9UWgoQ.mp4. That might mean that the file is corrupted. That may also mean that you are using a deprecated version of FFMPEG. On Ubuntu/Debian for instance the version in the repos is deprecated. Please update to a recent version from the website.
