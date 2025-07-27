@@ -59,6 +59,7 @@ class YouTubeShortGenerator:
                 'username': os.getenv('YT_USERNAME', ''),
                 'password': os.getenv('YT_PASSWORD', ''),
                 'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36',
+                'cookies': os.getenv('YT_COOKIES', '')
             }
             with yt_dlp.YoutubeDL(ydl_opts) as ydl:
                 info = ydl.extract_info(self.video_url, download=False)
@@ -113,7 +114,7 @@ class YouTubeShortGenerator:
             logger.error(f"Error fetching transcript: {e}")
             return False
 
-    def analyze_engagement(self, video_path: str):
+    def analyze_engagement(self, video_path):
         try:
             if not self.transcript:
                 return self.create_even_segments()
@@ -126,12 +127,7 @@ class YouTubeShortGenerator:
                 word_count = len(text.split())
                 density = word_count / entry['duration'] if entry['duration'] > 0 else 0
                 if current_segment is None:
-                    current_segment = {
-                        'start': start,
-                        'end': end,
-                        'text': text,
-                        'score': density * 10
-                    }
+                    current_segment = {'start': start, 'end': end, 'text': text, 'score': density * 10}
                 else:
                     potential_end = end
                     if potential_end - current_segment['start'] <= self.max_short_length:
@@ -141,12 +137,7 @@ class YouTubeShortGenerator:
                     else:
                         if current_segment['end'] - current_segment['start'] >= self.min_short_length:
                             segments.append(current_segment)
-                        current_segment = {
-                            'start': start,
-                            'end': end,
-                            'text': text,
-                            'score': density * 10
-                        }
+                        current_segment = {'start': start, 'end': end, 'text': text, 'score': density * 10}
             if current_segment and current_segment['end'] - current_segment['start'] >= self.min_short_length:
                 segments.append(current_segment)
             segments.sort(key=lambda x: x['score'], reverse=True)
@@ -168,11 +159,7 @@ class YouTubeShortGenerator:
                 if end > self.video_length:
                     end = self.video_length
                     start = max(0, end - self.min_short_length)
-                self.engagement_data.append({
-                    'start': start,
-                    'end': end,
-                    'score': 80
-                })
+                self.engagement_data.append({'start': start, 'end': end, 'score': 80})
             return True
         except Exception as e:
             logger.error(f"Error creating even segments: {e}")
